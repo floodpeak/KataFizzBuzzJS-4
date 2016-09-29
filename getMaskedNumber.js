@@ -3,14 +3,15 @@ var base2 = 5
 module.exports = function(number){
   var isMultiple3 = number % base1 == 0
   var isMultiple5 = number % base2 == 0
+  var result = ''
   if(isMultiple3 && isMultiple5){
-    return 'FizzBuzz'
+    result = 'FizzBuzz'
   }
   if(isMultiple3){
-    return 'Fizz'
+    result = 'Fizz'
   }
   if(isMultiple5){
-    return 'Buzz'
+    result = 'Buzz'
   }
-  return number
+  return result == '' ? number : result
 }
